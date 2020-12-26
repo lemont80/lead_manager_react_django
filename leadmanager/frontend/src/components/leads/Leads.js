@@ -15,22 +15,24 @@ export class Leads extends Component {
     }
 
     render() {
+        let i = 1
         return (
             <Fragment>
                 <h2>Leads</h2>
                 <table className="table table-stripped">
                     <thead>
                         <tr>
-                            <th>ID</th>
+                            <th>No.</th>
                             <th>Name</th>
                             <th>Email</th>
                             <th>Message</th>
-                            <th />
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
                         { this.props.leads.map(lead => (
                             <tr key={lead.id}>
+                                <td>{i++}</td>
                                 <td>{lead.name}</td>
                                 <td>{lead.email}</td>
                                 <td>{lead.message}</td>
